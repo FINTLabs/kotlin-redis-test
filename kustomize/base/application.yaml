@@ -1,0 +1,27 @@
+apiVersion: fintlabs.no/v1alpha1
+kind: Application
+metadata:
+  name: kotlin-redis-test
+  namespace: fintlabs-no
+  labels:
+    app.kubernetes.io/name: kotlin-redis-test
+    app.kubernetes.io/instance: kotlin-redis-test_fintlabs_no
+    app.kubernetes.io/version: latest
+    app.kubernetes.io/component: consumer
+    app.kubernetes.io/part-of: fint-core
+    fintlabs.no/team: core
+    fintlabs.no/org-id: fintlabs.no
+spec:
+  port: 8080
+  orgId: fintlabs.no
+  image: ghcr.io/fintlabs/kotlin-redis-test:latest
+  env:
+    - name: JAVA_TOOL_OPTIONS
+      value: '-XX:+ExitOnOutOfMemoryError -Xmx525M'
+  resources:
+    limits:
+      memory: "1Gi"
+      cpu: "500m"
+    requests:
+      memory: "500Mi"
+      cpu: "100m"
