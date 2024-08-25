@@ -1,4 +1,4 @@
-package no.fintlabs.kotlinrestapi
+package no.fintlabs.kotlinrestapi.student
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import java.util.*

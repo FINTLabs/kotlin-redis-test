@@ -1,5 +1,6 @@
-package no.fintlabs.kotlinrestapi
+package no.fintlabs.kotlinrestapi.student
 
+import no.fintlabs.kotlinrestapi.RedisService
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseEntity
